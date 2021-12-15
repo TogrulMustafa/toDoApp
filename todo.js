@@ -6,18 +6,11 @@ const yeniVezifeElaveBtn = document.querySelector('.btn-vezife-elaveet')
 const vezifeSiyahisi = document.querySelector('.vezife-siyahisi')
 yeniVezifeElaveBtn.addEventListener('click', vezifeElaveet)
 vezifeSiyahisi.addEventListener('click', vezifeTamamlaSil)
-// ?
 
-
-/*
-    <div class="vezife-item vezife-tamamlandi">
-            <li class="vezife-tanitim">Idmana get</li>
-            <button class="vezife-btn vezife-btn-tamamlandi" ><i class="fa fa-check" aria-hidden="true"></i></button>
-          <button class="vezife-btn vezife-btn-sil"><i class="fa fa-trash" aria-hidden="true"></i></button>
-   
-     </div>
+/* 
+   vezifeSiyahisi-ni ona gore klikleyirik ki,onun icinde kliklenecek iki child var.
+   Ayri-ayri kliklenme hadisesi yazmaqdansa,bir dene yaziriq onu da her ikisinin valideyni olan ucun yaziriq.
 */
-
 
 // toggle(),parentElement,appendChild,classlist,contains,value,
 
@@ -34,7 +27,6 @@ function vezifeTamamlaSil(e) {
 function vezifeElaveet() {
     const vezifeDiv = document.createElement('div')
     vezifeDiv.classList.add('vezife-item')
-    // <div class="vezife-item"> </div>
     const vezifeLi = document.createElement('li')
     vezifeLi.classList.add('vezife-tanitim')
     vezifeLi.textContent = yeniVezife.value
