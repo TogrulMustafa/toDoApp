@@ -7,15 +7,21 @@ const vezifeSiyahisi = document.querySelector('.vezife-siyahisi')
 yeniVezifeElaveBtn.addEventListener('click', vezifeElaveet)
 vezifeSiyahisi.addEventListener('click', vezifeTamamlaSil)
 
-/* 
-   vezifeSiyahisi-ni ona gore klikleyirik ki,onun icinde kliklenecek iki child var.
-   Ayri-ayri kliklenme hadisesi yazmaqdansa,bir dene yaziriq onu da her ikisinin valideyni olan ucun yaziriq.
-*/
 
 // toggle(),parentElement,appendChild,classlist,contains,value,
 
 function vezifeTamamlaSil(e) {
     const kliklenenElement = e.target
+    /* const kliklenenElement = e.target- bele bir sey yazdiqda js kliklenme hadisesinin serhedlerini
+            ul-nin(ul daxil) ici qebul edir ve bu areal daxilinde kliklediyin her element hedef alinir.
+            Biz vezifeTamamlaSil funksiyasi daxilinde if(kliklenenElement.classList.contains('vezife-btn-tamamlandi'))
+            bele bir sey yazmisiq deye ul serhedleri daxilinde kliklediklerin elementler(kliklenenElement) arasinda
+            vezife-btn-tamamlandi klassi olan varsa onun(kliklenenElement) parentine vezife-tamamlandi klassini toggle et demisik.
+            ul-nin serhedleri daxilinde hara klikleyirsen klikle onu
+            console.log() vasitesile console-da gore bilersen.
+    */ 
+
+    console.log(kliklenenElement)
     // ?
     if(kliklenenElement.classList.contains('vezife-btn-tamamlandi')) {
         kliklenenElement.parentElement.classList.toggle('vezife-tamamlandi')
